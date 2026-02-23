@@ -1,0 +1,154 @@
+/**
+ * Responsive breakpoints
+ * Mobile: < 768px | Tablet: 768px–1199px | Desktop: ≥ 1200px
+ */
+
+/* Tablet: nav to hamburger, 2-col story grid */
+@media (max-width: 1199px) {
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--color-overlay-light);
+    backdrop-filter: blur(10px);
+    padding: var(--space-xl);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition-base), opacity var(--transition-base),
+      visibility var(--transition-base);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .main-nav a {
+    font-size: var(--font-size-base);
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-preview__inner {
+    grid-template-columns: 1fr;
+  }
+  .about-preview__grid {
+    order: -1;
+  }
+
+  .about-collage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-collage .span-2 {
+    grid-column: span 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile: single column, carousel for stories, touch-friendly */
+@media (max-width: 767px) {
+  :root {
+    --font-size-hero: 2.25rem;
+    --section-padding-x: 1rem;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtext {
+    font-size: var(--font-size-base);
+  }
+  .hero__ctas {
+    flex-direction: column;
+  }
+  .hero__ctas .btn {
+    width: 100%;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* Mobile: carousel for featured stories on homepage */
+  .featured-stories .stories-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-md);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .featured-stories .stories-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .featured-stories .story-card {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+
+  .about-preview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-newsletter .newsletter-form {
+    flex-direction: column;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .story-page__title {
+    font-size: var(--font-size-2xl);
+  }
+  .story-page__body {
+    font-size: var(--font-size-base);
+  }
+  .story-page__body .pull-quote {
+    font-size: var(--font-size-xl);
+    padding-left: var(--space-md);
+  }
+}
+
+/* Desktop: ensure large images */
+@media (min-width: 1200px) {
+  .hero__image img {
+    object-position: center 30%;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contribute your story or donate to The Humans of Nepal. Every life has a story." />
+  <title>Contribute & Donate — The Humans of Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">The Humans of Nepal</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Donate</a></li>
+          <li><a href="contribute.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="header-util-btn" data-dark-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Dark mode">🌙</button>
+      <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="contribute-intro">
+      <div class="container">
+        <h1 class="section-title">Contribute a Story</h1>
+        <p class="section-subtitle">Have a story from Nepal—your own or someone you know? Share it with us. We review every submission with care.</p>
+      </div>
+    </section>
+
+    <div class="contribute-form-wrap">
+      <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+      <form id="contribute-form" class="contribute-form" action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Your name <span style="color: var(--color-accent);">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Full name" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span style="color: var(--color-accent);">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="story-title">Story title <span style="color: var(--color-accent);">*</span></label>
+          <input type="text" id="story-title" name="story_title" required placeholder="e.g. The Weaver of Patan" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="story-text">Your story <span style="color: var(--color-accent);">*</span></label>
+          <textarea id="story-text" name="story_text" required placeholder="Tell us the story in your own words…" aria-required="true"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo (optional)</label>
+          <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/webp" aria-label="Upload a photo for your story" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-hero">Submit Story</button>
+      </form>
+    </div>
+
+    <section id="contact" class="contribute-intro" style="padding-top: 0;">
+      <div class="container">
+        <h2 class="section-title">Contact & Donate</h2>
+        <p class="section-subtitle">To support our work with a donation or for general inquiries, reach us below.</p>
+        <p style="text-align: center;">
+          <a href="mailto:hello@thehumansofnepal.com" class="btn btn-secondary">hello@thehumansofnepal.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="site-logo">The Humans of Nepal</span>
+        <p>Real stories of resilience, courage, and humanity from Nepal.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="contribute.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p style="font-size: var(--font-size-sm); margin: 0;">Stay updated with new stories.</p>
+        <form class="newsletter-form" aria-label="Newsletter signup">
+          <input type="email" placeholder="Your email" required aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; The Humans of Nepal. Every life has a story.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

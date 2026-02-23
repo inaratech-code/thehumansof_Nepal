@@ -1,0 +1,84 @@
+/**
+ * The Humans of Nepal — Design Tokens
+ * Warm, nostalgic, earthy palette. Photo-first, high contrast text.
+ */
+
+:root {
+  /* Colors — warm & earthy */
+  --color-bg: #faf8f5;
+  --color-bg-alt: #f0ebe3;
+  --color-surface: #ffffff;
+  --color-text: #2c2416;
+  --color-text-muted: #5c5344;
+  --color-accent: #8b6914;
+  --color-accent-hover: #6d5210;
+  --color-accent-light: #d4b85c;
+  --color-border: #e5dfd4;
+  --color-overlay: rgba(44, 36, 22, 0.5);
+  --color-overlay-light: rgba(250, 248, 245, 0.85);
+
+  /* Typography */
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-hero: 3.5rem;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-wide: 0.05em;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --section-padding-y: 4rem;
+  --section-padding-x: 1.5rem;
+  --container-max: 1200px;
+  --header-height: 72px;
+
+  /* Breakpoints (use in media queries) */
+  --bp-mobile: 767px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1200px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(44, 36, 22, 0.08);
+  --shadow-md: 0 4px 12px rgba(44, 36, 22, 0.1);
+  --shadow-lg: 0 8px 24px rgba(44, 36, 22, 0.12);
+  --shadow-card: 0 4px 20px rgba(44, 36, 22, 0.08);
+}
+
+/* Dark mode (optional) */
+[data-theme="dark"] {
+  --color-bg: #1a1814;
+  --color-bg-alt: #252219;
+  --color-surface: #2c261e;
+  --color-text: #f5f2eb;
+  --color-text-muted: #b8b0a0;
+  --color-accent: #d4b85c;
+  --color-accent-hover: #e8d088;
+  --color-border: #3d362c;
+  --color-overlay: rgba(26, 24, 20, 0.7);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

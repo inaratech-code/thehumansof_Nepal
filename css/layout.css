@@ -1,0 +1,262 @@
+/**
+ * Layout — sections, hero, grids
+ */
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+}
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-2xl) var(--section-padding-x);
+  max-width: 800px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 var(--space-lg);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtext {
+  font-size: var(--font-size-xl);
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 var(--space-2xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.hero__ctas .btn-primary {
+  background: #fff;
+  color: var(--color-text);
+}
+.hero__ctas .btn-primary:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.hero__ctas .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+.hero__ctas .btn-secondary:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ========== FEATURED STORIES SECTION ========== */
+.featured-stories {
+  padding: var(--space-4xl) 0;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* ========== ABOUT PREVIEW (HOME) ========== */
+.about-preview {
+  padding: var(--space-4xl) 0;
+  background: var(--color-bg-alt);
+}
+
+.about-preview__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-preview__text .section-title {
+  margin-top: 0;
+}
+
+.about-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+.about-preview__grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ========== INDIVIDUAL STORY PAGE ========== */
+.story-page__hero {
+  position: relative;
+  max-height: 70vh;
+  overflow: hidden;
+}
+.story-page__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-page__content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--section-padding-x);
+}
+
+.story-page__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-md);
+  line-height: var(--line-height-tight);
+}
+
+.story-page__meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2xl);
+}
+
+.story-page__body {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+.story-page__body p {
+  margin: 0 0 var(--space-lg);
+}
+.story-page__body .pull-quote {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-style: italic;
+  color: var(--color-accent);
+  margin: var(--space-2xl) 0;
+  padding-left: var(--space-xl);
+  border-left: 4px solid var(--color-accent);
+}
+
+.story-page__share {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ========== ABOUT PAGE ========== */
+.about-hero {
+  padding: var(--space-4xl) 0;
+  text-align: center;
+}
+.about-hero .section-title {
+  margin-bottom: var(--space-md);
+}
+.about-mission {
+  max-width: 720px;
+  margin: 0 auto var(--space-3xl);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.about-collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-2xl) 0;
+}
+.about-collage img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.about-collage .span-2 {
+  grid-column: span 2;
+}
+
+/* ========== CONTRIBUTE PAGE ========== */
+.contribute-intro {
+  padding: var(--space-3xl) 0 var(--space-xl);
+  text-align: center;
+}
+.contribute-form-wrap {
+  max-width: 640px;
+  margin: 0 auto var(--space-4xl);
+  padding: 0 var(--section-padding-x);
+}
+
+/* ========== STORIES LIST PAGE ========== */
+.stories-list-header {
+  padding: var(--space-3xl) 0 var(--space-xl);
+  text-align: center;
+}
+.stories-list-header .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stories-list {
+  padding-bottom: var(--space-4xl);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
+  flex-wrap: wrap;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 var(--space-md);
+  border-radius: 4px;
+  font-weight: 500;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+.pagination a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.pagination .current {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  border-color: var(--color-accent);
+}

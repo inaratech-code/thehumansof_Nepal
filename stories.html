@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse all stories from The Humans of Nepal — resilience, courage, and humanity." />
+  <title>Stories — The Humans of Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">The Humans of Nepal</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Donate</a></li>
+          <li><a href="contribute.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="header-util-btn" data-dark-toggle aria-label="Toggle dark mode" aria-pressed="false" title="Dark mode">🌙</button>
+      <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="stories-list-header">
+      <div class="container">
+        <h1 class="section-title">All Stories</h1>
+        <p class="section-subtitle">Stories of resilience, courage, and humanity from across Nepal. Infinite scroll or pagination below.</p>
+        <!-- Optional: search bar -->
+        <div class="search-bar" style="max-width: 400px; margin: 0 auto var(--space-xl);">
+          <input type="search" id="story-search" placeholder="Search stories…" aria-label="Search stories" style="width: 100%; padding: var(--space-md); border: 1px solid var(--color-border); border-radius: 4px; font-size: 1rem;" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stories-list" aria-label="Stories list">
+      <div class="container">
+        <div class="stories-grid" id="stories-grid" role="list">
+          <article class="story-card" role="listitem" data-title="The Weaver of Patan" data-location="Kathmandu">
+            <a href="story.html?id=1" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80" alt="Woman in traditional dress" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=1">The Weaver of Patan</a></h3>
+              <p class="story-card__excerpt">She has been weaving for forty years. Every thread tells a story of patience and tradition.</p>
+              <p class="story-card__meta">Kathmandu · March 2024</p>
+            </div>
+          </article>
+          <article class="story-card" role="listitem" data-title="Guardian of the Pass" data-location="Annapurna">
+            <a href="story.html?id=2" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Man overlooking mountains" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=2">Guardian of the Pass</a></h3>
+              <p class="story-card__excerpt">He has guided trekkers through the high passes for two decades. The mountains teach you that you are small.</p>
+              <p class="story-card__meta">Annapurna · February 2024</p>
+            </div>
+          </article>
+          <article class="story-card" role="listitem" data-title="The Teacher of Dolakha" data-location="Dolakha">
+            <a href="story.html?id=3" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1580130775562-0ef92da028de?w=600&q=80" alt="Children in village school" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=3">The Teacher of Dolakha</a></h3>
+              <p class="story-card__excerpt">After the earthquake, she rebuilt the school with her own hands. Every child in the village knows her name.</p>
+              <p class="story-card__meta">Dolakha · January 2024</p>
+            </div>
+          </article>
+          <article class="story-card" role="listitem" data-title="The Tea Seller of Ilam" data-location="Ilam">
+            <a href="story.html?id=4" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" alt="Tea gardens" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=4">The Tea Seller of Ilam</a></h3>
+              <p class="story-card__excerpt">Three generations have tended these hills. He says the fog in the morning is what makes the tea taste like heaven.</p>
+              <p class="story-card__meta">Ilam · December 2023</p>
+            </div>
+          </article>
+          <article class="story-card" role="listitem" data-title="Eyes of Bhaktapur" data-location="Bhaktapur">
+            <a href="story.html?id=5" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=80" alt="Potter at wheel" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=5">Eyes of Bhaktapur</a></h3>
+              <p class="story-card__excerpt">He has made thousands of clay pots. His hands remember shapes his eyes can no longer see.</p>
+              <p class="story-card__meta">Bhaktapur · November 2023</p>
+            </div>
+          </article>
+          <article class="story-card" role="listitem" data-title="The Porter’s Song" data-location="Everest">
+            <a href="story.html?id=6" class="story-card__image">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Porter on trail" width="600" height="450" loading="lazy" />
+            </a>
+            <div class="story-card__content">
+              <h3 class="story-card__title"><a href="story.html?id=6">The Porter’s Song</a></h3>
+              <p class="story-card__excerpt">He carries more than his weight up the mountain. He sings so the load feels lighter.</p>
+              <p class="story-card__meta">Everest Region · October 2023</p>
+            </div>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Stories pagination">
+          <span class="current" aria-current="page">1</span>
+          <a href="stories.html?page=2">2</a>
+          <a href="stories.html?page=3">Next</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="site-logo">The Humans of Nepal</span>
+        <p>Real stories of resilience, courage, and humanity from Nepal.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="contribute.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p style="font-size: var(--font-size-sm); margin: 0;">Stay updated with new stories.</p>
+        <form class="newsletter-form" aria-label="Newsletter signup">
+          <input type="email" placeholder="Your email" required aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; The Humans of Nepal. Every life has a story.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/stories.js"></script>
+</body>
+</html>
