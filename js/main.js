@@ -1,10 +1,18 @@
 /**
  * The Humans of Nepal — Main JS
- * Sticky header behavior, hamburger menu, smooth scroll, optional dark mode, lazy loading
+ * Sticky header behavior, hamburger menu, Lenis smooth scroll, optional dark mode, lazy loading
  */
 
 (function () {
   'use strict';
+
+  // ----- Lenis smooth scroll -----
+  if (typeof Lenis !== 'undefined') {
+    var lenis = new Lenis({
+      autoRaf: true,
+      anchors: true
+    });
+  }
 
   // ----- Hamburger menu (tablet/mobile) -----
   var hamburger = document.querySelector('.hamburger');
@@ -36,18 +44,20 @@
     });
   }
 
-  // ----- Smooth scroll for in-page anchors -----
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    var href = anchor.getAttribute('href');
-    if (href === '#') return;
-    var target = document.querySelector(href);
-    if (target) {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-  });
+  // ----- Smooth scroll for in-page anchors (fallback when Lenis not loaded) -----
+  if (typeof Lenis === 'undefined') {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      var href = anchor.getAttribute('href');
+      if (href === '#') return;
+      var target = document.querySelector(href);
+      if (target) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    });
+  }
 
   // ----- Optional: Dark mode toggle -----
   var darkModeKey = 'thn-dark-mode';
