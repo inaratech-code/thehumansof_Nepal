@@ -40,6 +40,14 @@ thehumansofnepal/
 └── README.md
 ```
 
+## Custom domain (thehumansofnepal.com)
+
+The site is configured for **thehumansofnepal.com**:
+
+- **`CNAME`** — Contains `thehumansofnepal.com` for GitHub Pages. In the repo: **Settings → Pages → Custom domain**, enter `thehumansofnepal.com` and save. Enable **Enforce HTTPS** when DNS is active.
+- **DNS** (at your registrar): Add a CNAME record for `thehumansofnepal.com` (or `www` if you use www) pointing to `inaratech-code.github.io`, or use the A records GitHub shows in the Pages custom domain settings.
+- **Canonical and share URLs** in the HTML use `https://thehumansofnepal.com/` so search and social links use the correct domain.
+
 ## Run locally
 
 Open `index.html` in a browser, or use a local server:
