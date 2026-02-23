@@ -8,7 +8,7 @@
 
   // ----- Hamburger menu (tablet/mobile) -----
   var hamburger = document.querySelector('.hamburger');
-  var mainNav = document.querySelector('.main-nav');
+  var mainNav = document.getElementById('main-nav');
   if (hamburger && mainNav) {
     hamburger.addEventListener('click', function () {
       var expanded = hamburger.getAttribute('aria-expanded') === 'true';

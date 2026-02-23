@@ -47,7 +47,9 @@
   --section-padding-y: 4rem;
   --section-padding-x: 1.5rem;
   --container-max: 1200px;
-  --header-height: 72px;
+  --header-height: 160px;
+  --header-top-height: 0px;
+  --header-yellow: #faf8f5;
 
   /* Breakpoints (use in media queries) */
   --bp-mobile: 767px;

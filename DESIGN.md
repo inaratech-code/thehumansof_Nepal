@@ -24,7 +24,7 @@ This document describes the layout and visual design for **Desktop**, **Tablet**
 - **Background**: Semi-transparent overlay (`rgba(250,248,245,0.85)`), blur.
 - **Layout**: Flex; logo left, nav right.
 - **Logo**: “The Humans of Nepal” — Playfair Display, 1.25rem, bold.
-- **Nav**: Horizontal list — Home | Stories | About | Donate | Contact. Uppercase, small caps, letter-spacing. No hamburger.
+- **Nav**: Horizontal list — Home | Stories | About | Your Story | Contact. Uppercase, small caps, letter-spacing. No hamburger.
 
 ### Hero
 - **Height**: 85vh min.
