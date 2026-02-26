@@ -10,6 +10,7 @@
   right: 0;
   z-index: 100;
   transition: transform 0.3s ease;
+  background: var(--color-bg);
 }
 .header-wrap.header-scroll-hidden {
   transform: translateY(-100%);
@@ -51,6 +52,12 @@
 }
 .header-inner .header-col-left .main-nav--left {
   display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
 }
 .header-inner .site-logo {
   grid-column: 2;
@@ -69,6 +76,12 @@
 .header-inner .header-right .main-nav--right,
 .header-inner .header-right .header-widget-container {
   display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
 }
 
 .header-right {
