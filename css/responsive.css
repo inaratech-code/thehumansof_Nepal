@@ -171,6 +171,7 @@
 
   body {
     overflow-x: hidden;
+    padding-top: 72px;
   }
 
   .site-header {

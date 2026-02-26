@@ -7,11 +7,38 @@
   'use strict';
 
   // ----- Lenis smooth scroll -----
+  var lenis = null;
   if (typeof Lenis !== 'undefined') {
-    var lenis = new Lenis({
+    lenis = new Lenis({
       autoRaf: true,
       anchors: true
     });
+  }
+
+  // ----- Header: hide on scroll down, show on scroll up -----
+  var headerWrap = document.querySelector('.header-wrap');
+  var lastScrollY = 0;
+  var scrollThreshold = 60;
+  function onScroll() {
+    if (!headerWrap) return;
+    var scrollY = lenis ? lenis.scroll : (window.scrollY || window.pageYOffset);
+    if (scrollY < 10) {
+      headerWrap.classList.remove('header-scroll-hidden');
+      lastScrollY = scrollY;
+      return;
+    }
+    if (scrollY > lastScrollY && scrollY > scrollThreshold) {
+      headerWrap.classList.add('header-scroll-hidden');
+    } else if (scrollY < lastScrollY) {
+      headerWrap.classList.remove('header-scroll-hidden');
+    }
+    lastScrollY = scrollY;
+  }
+  if (headerWrap) {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    if (lenis) {
+      lenis.on('scroll', onScroll);
+    }
   }
 
   // ----- Hamburger menu (tablet/mobile) -----
