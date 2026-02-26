@@ -137,23 +137,35 @@
     font-size: 1.5rem;
   }
   .header-wrap {
-    background: var(--color-bg);
+    background: transparent;
   }
 
   .hero {
-    min-height: 75vh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+  }
+  .hero__content {
+    padding: var(--space-2xl) var(--section-padding-x);
+    padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom, 0px));
   }
   .hero__title {
     font-size: 2rem;
+    margin-bottom: var(--space-md);
   }
   .hero__subtext {
     font-size: var(--font-size-base);
+    margin-bottom: var(--space-xl);
   }
   .hero__ctas {
     flex-direction: column;
+    gap: var(--space-sm);
   }
   .hero__ctas .btn {
     width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .stories-grid {
