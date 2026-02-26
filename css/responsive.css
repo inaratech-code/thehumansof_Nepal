@@ -12,25 +12,23 @@
     overflow: visible !important;
   }
   .header-inner {
-    display: flex !important;
-    flex-wrap: nowrap;
-    justify-content: center;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    justify-content: space-between;
     width: 100% !important;
     max-width: 100% !important;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     overflow: visible !important;
   }
   .header-inner .header-col-left {
     display: flex !important;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    width: 100% !important;
+    justify-content: flex-start;
     min-width: 0;
     overflow: visible !important;
     visibility: visible !important;
+    grid-column: 1;
   }
   .header-inner .header-col-left .main-nav--left,
   .header-inner .header-col-left .main-nav--right {
@@ -54,15 +52,23 @@
     display: inline-block !important;
     visibility: visible !important;
   }
-  .header-inner .header-col-left .site-logo {
+  /* Logo: direct child of header-inner on all pages */
+  .header-inner .site-logo {
     display: flex !important;
     flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
     visibility: visible !important;
+    grid-column: 2;
+    justify-self: center;
   }
-  .header-inner .header-col-left .header-right {
+  /* Header right (hamburger): direct child of header-inner on all pages */
+  .header-inner .header-right {
     display: flex !important;
     flex-shrink: 0;
     visibility: visible !important;
+    grid-column: 3;
+    justify-self: end;
   }
   .header-inner .header-col-left .header-widget-container {
     display: none;
@@ -87,6 +93,11 @@
   }
   .header-right {
     justify-content: flex-end;
+  }
+  .header-inner .header-utils,
+  .header-inner .hamburger {
+    display: flex !important;
+    visibility: visible !important;
   }
   .mobile-nav {
     display: block;
